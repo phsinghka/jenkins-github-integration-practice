@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/phsinghka/jenkins-github-integration-practice.git'
+                git url: 'https://github.com/phsinghka/jenkins-github-integration-practice.git', branch: 'java-app'
             }
         }
 
