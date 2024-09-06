@@ -69,21 +69,6 @@ pipeline {
             }
         }
 
-        stage('Deploy on AWS') {
-            steps {
-                script {
-                    // Deploying the application on AWS S3 bucket
-                    sh '''
-                    aws s3 cp target/myapp.war s3://myapp-deployments/
-                    '''
-                }
-            }
-        }
-    }
 
-    post {
-        always {
-            cleanWs()
-        }
     }
 }
